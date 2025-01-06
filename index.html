@@ -1,11 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-</head>
-<body>
-    <h1>Hello, World!</h1>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Presentation and Application Layers Report</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1>Presentation and Application Layers Report</h1>
+        </header>
+
+        <main>
+            <section id="theoretical">
+                <h2>Theoretical Part</h2>
+
+                <h3>1.1 DNS System</h3>
+
+                <h4>1.1.1 List of Top-Level Domains</h4>
+                <p>Top-Level Domains (TLDs) are the highest level in the DNS hierarchy. They include:</p>
+                <ul>
+                    <li><strong>Generic TLDs (gTLDs)</strong> - Examples: .com, .org, .net</li>
+                    <li><strong>Country-Code TLDs (ccTLDs)</strong> - Examples: .pl, .uk</li>
+                    <li><strong>Sponsored TLDs (sTLDs)</strong> - Example: .edu, .gov</li>
+                </ul>
+
+                <h4>1.1.2 Hierarchical Structure of Domain Name System (DNS)</h4>
+                <p>
+                    The DNS hierarchy is structured from right to left, with each level serving a distinct purpose. The
+                    components include:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Root</strong> - The highest level in the DNS, represented by a dot (`.`), though often
+                        omitted in domain names. It holds information about top-level domains (TLDs).
+                    </li>
+
+                    <li>
+                        <strong>Top-Level Domain (TLD)</strong> - The last part of a domain name, such as `.com`,
+                        `.org`, or `.edu`. TLDs can be generic (gTLDs), country-code (ccTLDs), or sponsored (sTLDs).
+                    </li>
+
+                    <li>
+                        <strong>Second-Level Domain (SLD)</strong> - The part of the domain directly below the TLD,
+                        e.g., "example" in `example.com`. It typically represents the organization or entity.
+                    </li>
+
+                    <li>
+                        <strong>Subdomains</strong> - Additional divisions within a domain, such as `blog.example.com`.
+                        They are used to organize different services or sections of a website.
+                    </li>
+
+                    <li>
+                        <strong>Host</strong> - The specific server or machine in the domain, such as `www` in
+                        `www.example.com`, responsible for serving content or services.
+                    </li>
+                </ul>
+
+                <h4>DNS Queries</h4>
+                <p>
+                    A DNS query is a request to resolve a domain name into an IP address. The query is sent from a
+                    client to a DNS server and may pass through several servers to get the correct response.
+                </p>
+
+                <h4>DNS Delegation</h4>
+                <p>
+                    DNS delegation involves a parent zone delegating authority to a nameserver for a subdomain. This
+                    allows different DNS servers to manage different parts of the DNS hierarchy.
+                </p>
+
+                <h4>1.1.3 DNS Records and Reverse DNS</h4>
+                <p>DNS records store information about domain names. Common types include:</p>
+                <ul>
+                    <li><strong>A record</strong> - Maps a domain to an IP address.</li>
+                    <li><strong>MX record</strong> - Specifies email servers.</li>
+                    <li><strong>PTR record</strong> - Reverse DNS, maps IP to domain name.</li>
+                    <li><strong>CNAME record</strong> - Alias for another domain name.</li>
+                    <li><strong>TXT record</strong> - Stores text, often for verification.</li>
+                </ul>
+
+                <h4>1.1.4 Authoritative and Non-Authoritative Answers</h4>
+                <p>
+                    An authoritative answer comes from a DNS server that holds the domain's records. A non-authoritative
+                    answer comes from a server that retrieved the data from another server or cache.
+                </p>
+
+                <h4>1.1.5 DNS Resolver, DNS Cache, File: /etc/hosts</h4>
+                <p>
+                    A DNS resolver translates domain names to IP addresses. DNS cache stores previous lookups for faster
+                    resolution. The file <code>/etc/hosts</code> maps domain names to IPs locally, bypassing DNS
+                    queries.
+                </p>
+
+                <h3>1.2 Mail System</h3>
+
+                <h4>Protocols POP3, IMAP, SMTP</h4>
+                <p>Email communication uses these protocols:</p>
+                <ul>
+                    <li><strong>POP3</strong> - Downloads emails from the server, removing them.</li>
+                    <li>
+                        <strong>IMAP</strong> - Allows email management on the server, keeping it synchronized across
+                        devices.
+                    </li>
+                    <li><strong>SMTP</strong> - Sends emails from client to server.</li>
+                </ul>
+
+                <h4>Email Protocols and Security</h4>
+                <ul>
+                    <li>
+                        <strong>NNTP (Network News Transfer Protocol):</strong> Used for reading and posting newsgroup
+                        messages.
+                    </li>
+                    <li><strong>Email Mailbox:</strong> Stores messages.</li>
+                    <li><strong>Parameters:</strong> Configure delivery of emails.</li>
+                    <li><strong>Aliases:</strong> Identify alternative email addresses for a user.</li>
+                    <li><strong>Email Address:</strong> Identifies the recipient of an email.</li>
+                    <li>
+                        <strong>Email Structure:</strong> Includes a header (sender, recipient, etc.) and a body,
+                        separated by a blank line.
+                    </li>
+                    <li><strong>Attachments:</strong> Files sent with emails.</li>
+                    <li>
+                        <strong>Email Coding (MIME):</strong> MIME encodes and decodes non-text data, such as images or
+                        audio.
+                    </li>
+                    <li><strong>Mailing Lists:</strong> Send emails to multiple recipients.</li>
+                    <li><strong>Email Gate:</strong> Enables communication between different systems or networks.</li>
+                    <li><strong>Email Security - SSL and TLS:</strong> Encrypt emails for secure transmission.</li>
+                    <li><strong>PGP:</strong> Encrypts and signs emails for confidentiality and authenticity.</li>
+                    <li><strong>Email Signature:</strong> Verifies the authenticity of the sender.</li>
+                    <li><strong>Spam:</strong> Refers to unwanted or unsolicited emails.</li>
+                    <li><strong>Blacklists:</strong> Contain known spam sources.</li>
+                    <li><strong>Graylists:</strong> Temporarily delay suspicious emails to identify spam.</li>
+                    <li>
+                        <strong>Spam Filters:</strong> Detect and block unwanted emails based on patterns and behaviors.
+                    </li>
+                </ul>
+            </section>
+
+            <section id="practical">
+                <h2>Practical Part</h2>
+
+                <h3>2.1 DNS System</h3>
+
+                <h4>2.1.1 Display DNS Settings</h4>
+                <p>
+                    To view DNS settings on your computer, use the <strong>Control Panel</strong> or the
+                    <code>ipconfig</code> command in Command Prompt.
+                </p>
+
+                <h4>2.1.2 Using dig, host, nslookup</h4>
+                <p>
+                    Use <strong>dig</strong>, <strong>host</strong>, and <strong>nslookup</strong> to gather DNS
+                    information for various domains and IPs.
+                </p>
+                <ul>
+                    <li>Find domain names and IPs in the <code>lodz.pl</code> domain</li>
+                    <li>Identify DNS settings for computers in Europe and outside Europe</li>
+                    <li>Verify DNS settings for localhost</li>
+                    <li>Flush DNS cache using <code>ipconfig /flushdns</code></li>
+                </ul>
+
+                <h4>2.1.6 Modify Hosts File</h4>
+                <p>
+                    Edit the <code>/etc/hosts</code> file to redirect <code>ifeXX.com</code> to <code>msn.com</code> by
+                    mapping the correct IP.
+                </p>
+
+                <h3>2.2 Mail System</h3>
+
+                <h4>2.2.1 Configure Thunderbird</h4>
+                <p>Configure Thunderbird to send and receive emails from <code>studife.it.p.lodz.pl</code>.</p>
+
+                <h4>2.2.2 Send Email to Invalid Servers</h4>
+                <p>
+                    Send emails to a non-existent mail server, non-existent users, and a non-email server to observe
+                    error responses.
+                </p>
+
+                <h4>2.2.3 Analyze with Wireshark</h4>
+                <p>Use Wireshark to analyze the process of sending and receiving emails through Thunderbird.</p>
+
+                <h4>2.2.4 Send Email via Telnet</h4>
+                <p>
+                    Send and receive emails using SMTP and POP3 through Telnet to interact with mail servers directly.
+                </p>
+            </section>
+        </main>
+    </body>
 </html>
